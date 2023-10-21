@@ -19,9 +19,7 @@ const server = http.createServer((req, res) => {
     });
     return res.writeHead(201).end();
   }
-
-  console.log(method, url);
-  return res.end(method);
+  return res.setHeader(404).end();
 });
 
 server.listen(3333);
